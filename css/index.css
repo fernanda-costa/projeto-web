@@ -1,0 +1,18 @@
+.container-fluid {
+    height: 100vh;
+    background-color: rgb(14, 133, 189);
+}
+
+.login {
+    background-color: rgb(120, 192, 192);
+    padding: 30px;
+}
+
+body {
+    padding-top: 50px;
+}
+
+.principal {
+    padding: 40px 15px;
+    text-align: center;
+}
