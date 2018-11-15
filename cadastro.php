@@ -1,3 +1,5 @@
+<?php require_once("mostra-alerta.php")?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,7 +14,13 @@
 
     <div class="d-flex justify-content-center align-items-center container-fluid">
         <div class="login col-lg-5 col-md-10 col-sm-12">
+        
+        <?php
+            mostraAlerta("success");
+            mostraAlerta("danger");
+        ?>
             <h3 class="text-center">Criar Conta</h3>
+            
             <form action="cadastrar-usuario.php" method="post">
                 <div class="form-group">
                     <label for="nome">Nome</label>

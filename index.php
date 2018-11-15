@@ -1,3 +1,7 @@
+<?php 
+    require_once("mostra-alerta.php");
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,7 +16,12 @@
 
     <div class="d-flex justify-content-center align-items-center container-fluid">
         <div class="login col-lg-5 col-md-8 col-sm-12">
-            <form>
+       
+        <?php
+            mostraAlerta("success");
+            mostraAlerta("danger");
+        ?>
+            <form action="login.php" method="post">
                 <h2>Login</h2>
                 <div class="form-group">
                     <label for="usuario">Nome de Usuario</label>
