@@ -20,7 +20,6 @@
         $query = "SELECT * FROM tbUsuario WHERE email = '{$email}' AND senha = '{$senhaMd5}'";
         $resultado = mysqli_query($conexao, $query);
         $usuario = mysqli_fetch_assoc($resultado);
-        var_dump($usuario);
         return $usuario;
     }
 

@@ -1,3 +1,3 @@
-$(function () {
-    $('#myTab li:last-child a').tab('show')
-  });
+$( function() {
+  $( "#datepicker" ).datepicker();
+} );

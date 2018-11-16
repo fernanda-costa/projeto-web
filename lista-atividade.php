@@ -1,41 +1,34 @@
 <?php
     require("cabecalho.php");
-    require("banco-materia.php");
+    require("banco-atividade.php");
 
-    $materias = listarMaterias($conexao);?>
+    $atividades = listarAtividades($conexao);?>
 
     <table class="table table-striped table-bordered">
         <thead>
-            <td>Nome</td>
-            <td>Nome do professor</td>
-            <td>Periodo</td>
-            <td>Carga Horaria</td>
-            </thead>
-    <?php foreach($materias as $materia): ?>
+            <td>Atividade</td>
+            <td>Data de entrega</td>
+            <td>Descricao</td>
+        </thead>
+
+    <?php foreach($atividades as $atividade): 
+        $data = $atividade['dataEntrega'];
+    ?>
     <tr>
-        <td><?=$materia['nome']?></td>
-        <td><?=$materia['nomeProfessor']?></td>
-        <td><?=$materia['periodo']?></td>
-        <td><?=$materia['cargaHoraria'] . "hr"?></td>
-        <td>
-            <form action="form-materia-alterar.php" method="post">
-                <input type="hidden" name="id" value="<?=$materia['id']?>">
-                <button class="btn btn-primary">Alterar</a>
-            </form>
-        </td>
+        <td><?=$atividade['nome']?></td>
+        <td><?= $data?></td>
+        <td><?=substr($atividade['descricao'], 0, 50)?></td>
         <td>
             <form action="remove-materia.php" method="post">
-                <input type="hidden" name="id" value="<?=$materia['id']?>">
+                <input type="hidden" name="id" value="<?=$atividade['id']?>">
                 <button class="btn btn-seconday">Remover</a>
             </form>
         </td>
-       </a></td>
-
     </tr>
     <?php endforeach; ?>
     </table>
 
-    <a class="btn btn-primary" href="form-materia.php">Adicionar Materia</a>
+    <a class="btn btn-primary" href="form-atividade.php">Adicionar Atividade</a>
 
     <?php require("rodape.php");
 ?>

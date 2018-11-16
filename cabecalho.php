@@ -14,6 +14,9 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css" href="css/index.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <body>
 
 <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
@@ -31,7 +34,7 @@
                 <a class="nav-link" href="#">Faltas</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="form-atividade.php">Atividades</a>
+                <a class="nav-link" href="lista-atividade.php">Atividades</a>
             </li>
         </ul>
         <?php

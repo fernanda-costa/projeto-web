@@ -15,7 +15,7 @@
 
     <div class="form-group">
         <label for="dataEntrega">Data de entrega</label>
-        <input type="text" class="form-control" name="dataEntrega">
+        <input type="text" id="datepicker" name="dataEntrega">
     </div>
 
     <div class="form-group  col-md-2">
@@ -23,7 +23,7 @@
         <input type="number" class="form-control" name="valor">
     </div>
 
-     <div class="form-group  col-md-2">
+     <div class="form-group">
      <textarea class="form-control" name="descricao"></textarea><br>
     </div>
 
