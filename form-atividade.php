@@ -23,11 +23,15 @@
         <input type="number" class="form-control" name="valor">
     </div>
 
+     <div class="form-group  col-md-2">
+     <textarea class="form-control" name="descricao"></textarea><br>
+    </div>
+
     <div class="form-group">
         <label for="materia_id">Materia</label>
         <select name="materia_id">
             <?php foreach($materias as $materia): ?>
-                <option value="<?=$categoria['id']?>" <?=$selecao?>><?=$materia['nome']?></option>
+                <option value="<?=$materia['id']?>" <?=$selecao?>><?=$materia['nome']?></option>
             <?php endforeach ?>
         </select> 
     </div>
