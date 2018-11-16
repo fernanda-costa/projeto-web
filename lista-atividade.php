@@ -13,12 +13,10 @@
             <td>Descricao</td>
         </thead>
 
-    <?php foreach($atividades as $atividade): 
-        $data = $atividade['dataEntrega'];
-    ?>
+    <?php foreach($atividades as $atividade): ?>
     <tr>
         <td><?=$atividade['nome']?></td>
-        <td><?= $data?></td>
+        <td><?= date("d/m/Y", strtotime($atividade['dataEntrega']))?></td>
         <td><?=substr($atividade['descricao'], 0, 50)?></td>
         <td>
             <form action="form-atividade-alterar.php" method="post">

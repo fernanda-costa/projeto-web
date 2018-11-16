@@ -5,7 +5,7 @@ require_once("data.php");
 
 
 $nome = $_POST['nome'];
-$dataEntrega = dateEmMysql($_POST['dataEntrega']);
+$dataEntrega = $_POST['dataEntrega'];
 $valor = $_POST['valor'];
 $materia_id = $_POST['materia_id'];
 $descricao = $_POST['descricao'];
