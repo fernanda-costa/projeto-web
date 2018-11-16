@@ -20,9 +20,15 @@ function listarAtividades ($conexao) {
 
     return $atividades;
 }
-function removeMateria($conexao, $id){
+function removeAtividade($conexao, $id){
     $query = "delete from tbAtividade where id = {$id}";
     return mysqli_query($conexao, $query);
+}
+
+function buscarAtividade($conexao, $id) {
+    $query = "SELECT * FROM tbAtividade WHERE id = {$id}";
+    $resultado = mysqli_query($conexao, $query);
+    return mysqli_fetch_assoc($resultado);
 }
 
 ?>

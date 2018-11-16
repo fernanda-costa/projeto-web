@@ -21,17 +21,18 @@
         <td><?= $data?></td>
         <td><?=substr($atividade['descricao'], 0, 50)?></td>
         <td>
-            <form action="remove-atividade.php" method="post">
+            <form action="form-atividade-alterar.php" method="post">
                 <input type="hidden" name="id" value="<?=$atividade['id']?>">
-                <button class="btn green lighten-2">Remover</a>
+                <button class="btn green lighten-2">Alterar</a>
             </form>
         </td>
         <td>
-            <form action="alterar-atividade.php" method="post">
+            <form action="remove-atividade.php" method="post">
                 <input type="hidden" name="id" value="<?=$atividade['id']?>">
-                <button class="btn red darken-2">Alterar</a>
+                <button class="btn red darken-2">Remover</a>
             </form>
         </td>
+        
     </tr>
     <?php endforeach; ?>
     </table>

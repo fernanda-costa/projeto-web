@@ -1,16 +1,21 @@
 <?php
     require("cabecalho.php");
+    include("banco-atividade.php");
     include("banco-materia.php");
+
+    $id = $_POST['id'];
+
     $materias = listarMaterias($conexao);
+    $atividade = buscarAtividade($conexao, $id);
 ?>
 
-<h3>Adicionar Atividade</h3>
+<h3>Alterar Atividade</h3>
 
 <form action="adicionar-atividade.php" method="post">
 
     <div class="row">
         <div class="input-field col s12">
-            <input id="nome" type="text" class="validate" name="nome" autocomplete="off">
+            <input id="nome" type="text" class="validate" name="nome" autocomplete="off" value="<?=$atividade['nome']?>">
             <label for="nome">Titulo da atividade</label>
         </div>
     </div>
@@ -23,14 +28,14 @@
     </div>
     <div class="row">
         <div class="input-field col s2">
-            <input id="valor" type="text" class="validate" name="valor" autocomplete="off">
+            <input id="valor" type="text" class="validate" name="valor" autocomplete="off" value="<?=$atividade['valor']?>">
             <label for="valor">Valor</label>
         </div>
     </div>
     <div class="row">
         <div class="row">
             <div class="input-field col s12">
-                <textarea id="descricao" class="materialize-textarea" name="descricao"></textarea>
+                <textarea id="descricao" class="materialize-textarea" name="descricao"><?=$atividade['descricao']?></textarea>
                 <label for="descricao">Descrição</label>
             </div>
         </div>
@@ -39,7 +44,9 @@
     <div class="input-field col s8">
         <select name="materia_id">
             <option value="" disabled selected>Escolha a Materia</option>
-            <?php foreach($materias as $materia): ?>
+            <?php foreach($materias as $materia): 
+                $materiaSelecionada = $atividade['materia_id'] == $materia['id'];
+                $selecao = $materiaSelecionada ? "selected='selected'" : ""; ?>   
                 <option value="<?=$materia['id']?>" <?=$selecao?>><?=$materia['nome']?></option>
             <?php endforeach ?>
         </select>

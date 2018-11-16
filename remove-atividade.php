@@ -3,9 +3,9 @@
 
     $id = $_POST['id'];
 
-    removeMateria($conexao, $id);
+    removeAtividade($conexao, $id);
     header('Location: lista-atividade.php');
-    $_SESSION['success'] = "Produto removido com sucesso!";
+    $_SESSION['success'] = "Atividade removida com sucesso!";
     die();
 ?>
 
