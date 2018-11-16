@@ -37,4 +37,10 @@ function alterarMateria ($conexao, $id, $nome, $nomeProfessor, $periodo, $cargaH
 
     return mysqli_query($conexao, $query);
 }
+
+function removeMateria($conexao, $id){
+    $query = "delete from tbMateria where id = {$id}";
+    return mysqli_query($conexao, $query);
+}
+
 ?>

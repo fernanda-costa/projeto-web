@@ -18,14 +18,14 @@
         <td><?=$materia['periodo']?></td>
         <td><?=$materia['cargaHoraria'] . "hr"?></td>
         <td>
-            <form action="materia-altera-form.php" method="post">
+            <form action="form-materia-alterar.php" method="post">
                 <input type="hidden" name="id" value="<?=$materia['id']?>">
                 <button class="btn btn-primary">Alterar</a>
             </form>
         </td>
         <td>
-            <form action="remove-produto.php" method="post">
-                <input type="hidden" name="id" value="<?=$produto['id']?>">
+            <form action="remove-materia.php" method="post">
+                <input type="hidden" name="id" value="<?=$materia['id']?>">
                 <button class="btn btn-seconday">Remover</a>
             </form>
         </td>
@@ -35,10 +35,7 @@
     <?php endforeach; ?>
     </table>
 
-    <a class="btn btn-primary" href="materia-form.php">Adicionar Materia</a>
+    <a class="btn btn-primary" href="form-materia.php">Adicionar Materia</a>
 
-
-
-    
     <?php require("rodape.php");
 ?>

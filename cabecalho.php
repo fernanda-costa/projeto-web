@@ -31,7 +31,7 @@
                 <a class="nav-link" href="#">Faltas</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="atividades.php">Atividades</a>
+                <a class="nav-link" href="form-atividade.php">Atividades</a>
             </li>
         </ul>
         <?php
