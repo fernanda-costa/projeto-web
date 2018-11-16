@@ -25,13 +25,13 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item">
-                <a class="nav-link" href="materias.html">Materias</a>
+                <a class="nav-link" href="materia-form.php">Materias</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Faltas</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="atividades.html">Atividades</a>
+                <a class="nav-link" href="atividades.php">Atividades</a>
             </li>
         </ul>
         <?php
@@ -50,3 +50,7 @@
     <div class="container">
         <div class="principal">
 
+        <?php
+            mostraAlerta("success");
+            mostraAlerta("danger");
+        ?>

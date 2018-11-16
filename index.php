@@ -25,11 +25,11 @@
                 <h2>Login</h2>
                 <div class="form-group">
                     <label for="usuario">Nome de Usuario</label>
-                    <input type="text" class="form-control" id="usuario" placeholder="Usuario">
+                    <input type="text" class="form-control" name="email" placeholder="Usuario">
                 </div>
                 <div class="form-group">
                     <label for="senha">Senha</label>
-                    <input type="password" class="form-control" id="senha" placeholder="Senha">
+                    <input type="password" class="form-control" name="senha" placeholder="Senha">
                 </div>
                 <button type="submit" class="btn btn-primary">Login</button>
                 <a class="ml-3" href="cadastro.php">Criar conta</a>

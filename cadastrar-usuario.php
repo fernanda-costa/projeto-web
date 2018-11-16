@@ -16,5 +16,6 @@
         header("Location: cadastro.php");
         $_SESSION["danger"] = "Ocorreu um erro na criação da conta. Favor tentar novamente!" . $msg;
     }
+    die();
 
 ?>
