@@ -7,13 +7,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Vida Academica</title>
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+ 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" type="text/css" href="css/index.css"/>
 </head>
 <body>
 
-    <div class="d-flex justify-content-center align-items-center container-fluid">
-        <div class="login col-lg-5 col-md-10 col-sm-12">
+    <div class="container">
+ <div class="row">
+      <div class="col s12 l8 offset-l2">
         
         <?php
             mostraAlerta("success");
@@ -41,6 +44,8 @@
                     <input type="text" class="form-control" name="curso">
                 </div>
                 <button type="submit" class="btn btn-primary">Criar conta</button>
+                <a href="index.php">Já possui uma conta?</a>
+
                 </form>   
             </div>
         </div>

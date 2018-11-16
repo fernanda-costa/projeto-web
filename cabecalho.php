@@ -11,45 +11,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Vida Academica</title>
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css" href="css/index.css"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 <body>
 
-<nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Alterna navegação">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <a class="navbar-brand" href="home.php">Vida Academica</a>
-              
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li class="nav-item">
-                <a class="nav-link" href="lista-materias.php">Materias</a>
+<nav>
+    <div class="nav-wrapper cyan lighten-1">
+      <a href="home.php" class="brand-logo">Vida Academica</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="lista-materias.php">Materias</a></li>
+        <li><a href="lista-atividade.php">Atividades</a></li>
+        <?php if (usuarioIsLogado()){ ?>
+            <li class="nav-item self-align-right">
+                <a class="nav-link" href="logout.php">Logout</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Faltas</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="lista-atividade.php">Atividades</a>
-            </li>
-        </ul>
-        <?php
-            if (usuarioIsLogado()){ ?>
-                <ul class="navbar-nav navbar-right">
-                    <li class="nav-item self-align-right">
-                        <a class="nav-link" href="logout.php">Logout</a>
-                    </li>
-                </ul>   
         <?php } ?>
-       
-       
+      </ul>
     </div>
-</nav>
+  </nav>
 
+  <ul class="sidenav" id="mobile-demo">
+  <li><a href="lista-materias.php">Materias</a></li>
+  <li><a href="lista-atividade.php">Atividades</a></li>
+  <?php if (usuarioIsLogado()){ ?>
+            <li class="nav-item self-align-right">
+                <a class="nav-link" href="logout.php">Logout</a>
+            </li>
+        <?php } ?>    
+  </ul>
+        
     <div class="container">
         <div class="principal">
 

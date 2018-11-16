@@ -15,12 +15,16 @@
     <input type="number" class="form-control" name="cargaHoraria" value="<?=$materia['cargaHoraria']?>">
 </div>
 
-<div class="custom-control custom-radio">
-    <input type="radio" id="semestral" name="periodo" class="custom-control-input" value="semestral" <?=$semestral?>>
-    <label class="custom-control-label" for="semestral">semestral</label>
-</div>
+ <p>
+      <label>
+        <input name="periodo" type="radio" value="semestral" <?=$semestral?>/>
+        <span>Semestral</span>
+      </label>
+    </p>
 
-<div class="custom-control custom-radio">
-    <input type="radio" id="anual" name="periodo" class="custom-control-input" value="anual" <?=$anual?>>
-    <label class="custom-control-label" for="anual">anual</label>
-</div>
+<p>
+      <label>
+        <input name="periodo" type="radio" value="anual" <?=$anual?>/>
+        <span>Anual</span>
+      </label>
+    </p>

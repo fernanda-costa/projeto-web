@@ -14,8 +14,8 @@
     </div>
 
     <div class="form-group">
-        <label for="dataEntrega">Data de entrega</label>
-        <input type="text" id="datepicker" name="dataEntrega">
+        <label for="valor">Data de Entrega</label>
+        <input type="text" class="datepicker">
     </div>
 
     <div class="form-group  col-md-2">

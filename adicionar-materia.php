@@ -15,7 +15,7 @@ if (inserirMateria($conexao, $nome, $nomeProfessor, $periodo, $cargaHoraria, $us
     $_SESSION["success"] = "Materia Criada com sucesso!";
 } else {
     $msg = mysqli_error($conexao);
-    header("Location: materia-form.php");
+    header("Location: form-materia.php");
     $_SESSION["danger"] = "Ocorreu um erro na criação da materia. Favor tentar novamente! " . $periodo;
 }
 die();

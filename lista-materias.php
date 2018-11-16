@@ -4,7 +4,9 @@
 
     $materias = listarMaterias($conexao);?>
 
-    <table class="table table-striped table-bordered">
+    <h3 class="titulo">Matérias</h3>
+
+    <table>
         <thead>
             <td>Nome</td>
             <td>Nome do professor</td>
@@ -34,8 +36,9 @@
     </tr>
     <?php endforeach; ?>
     </table>
-
-    <a class="btn btn-primary" href="form-materia.php">Adicionar Materia</a>
+    <a href="form-materia.php" class="btn-floating btn-large waves-effect waves-light red">
+        <i class="material-icons">add</i>
+    </a>
 
     <?php require("rodape.php");
 ?>
