@@ -13,19 +13,19 @@
     <title>Vida Academica</title>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css" href="css/index.css"/>
-</head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <body>
 
 <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Alterna navegação">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="home.php">Vida Academica</a>
               
     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item">
-                <a class="nav-link" href="materia-form.php">Materias</a>
+                <a class="nav-link" href="lista-materias.php">Materias</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Faltas</a>
