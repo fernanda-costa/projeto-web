@@ -3,18 +3,19 @@ require_once("banco-atividade.php");
 
 $nome = $_POST['nome'];
 $dataEntrega = $_POST['dataEntrega'];
-$descricao = $_POST['descricao'];
 $valor = $_POST['valor'];
+$materia_id = $_POST['materia_id'];
+$descricao = $_POST['descricao'];
 $id = $_POST['id'];
 
-if (alterarMateria($conexao, $id, $nome, $dataEntrega, $descricao, $cargaHoraria)) {
-    header("Location: lista-materias.php");
-    $_SESSION["success"] = "Materia alterada com sucesso!";
+if (alterarAtividade($conexao, $id, $nome, $dataEntrega, $descricao, $valor, $materia_id)) {
+    header("Location: lista-atividade.php");
+    $_SESSION["success"] = "Atividade alterada com sucesso!";
 } else {
     $msg = mysqli_error($conexao);
-    header("Location: lista-materias.php");
-    $_SESSION["danger"] = "Ocorreu um erro na alteração da materia. Favor tentar novamente! " 
-    . $id. $nome. $nomeProfessor. $periodo. $cargaHoraria;
+    header("Location: lista-atividade.php");
+    $_SESSION["danger"] = "Ocorreu um erro na alteração da atividade. Favor tentar novamente! " 
+    . $id. $dataEntrega. $nome. $valor. $descricao . $materia_id;
 }
 die();
 

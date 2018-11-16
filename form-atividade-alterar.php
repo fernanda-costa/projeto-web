@@ -11,7 +11,9 @@
 
 <h3>Alterar Atividade</h3>
 
-<form action="adicionar-atividade.php" method="post">
+<form action="alterar-atividade.php" method="post">
+
+    <input type="hidden" name="id" value="<?=$atividade['id']?>">
 
     <div class="row">
         <div class="input-field col s12">
@@ -22,7 +24,7 @@
 
     <div class="row">
         <div class="input-field col s12">
-            <input id="dataEntrega" type="text" class="datepicker" name="dataEntrega" autocomplete="off">
+            <input id="dataEntrega" type="text" class="datepicker" name="dataEntrega" autocomplete="off" value="<?=$atividade['dataEntrega']?>">
             <label for="dataEntrega">Data de Entrega</label>
         </div>
     </div>
@@ -53,7 +55,7 @@
         <label for="materia_id">Materia</label>
     </div>
 
-    <button type="submit" class="btn btn-primary">Adicionar Atividade</button>
+    <button type="submit" class="btn btn-primary">Alterar Atividade</button>
 
 </form>
 

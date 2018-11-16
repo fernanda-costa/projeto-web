@@ -31,4 +31,14 @@ function buscarAtividade($conexao, $id) {
     return mysqli_fetch_assoc($resultado);
 }
 
+function alterarAtividade($conexao, $id, $nome, $dataEntrega, $descricao, $valor, $materia_id) {
+    $nome = mysqli_real_escape_string($conexao, $nome);
+    $descricao = mysqli_real_escape_string($conexao, $descricao);
+
+    $query = "update tbAtividade set nome = '{$nome}', dataEntrega = '{$dataEntrega}',
+    descricao = '{$descricao}', valor = {$valor}, materia_id = {$materia_id} where id = {$id}";
+
+    return mysqli_query($conexao, $query);
+}
+
 ?>
