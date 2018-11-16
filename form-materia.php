@@ -7,7 +7,7 @@
 
 <form action="adicionar-materia.php" method="post">
   
-    <?php include("./form-materia-base.php")?>
+    <?php include("form-materia-base.php")?>
     
     <button type="submit" class="btn btn-primary">Cadastrar</button>
 </form>

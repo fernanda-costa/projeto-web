@@ -23,20 +23,20 @@
         <td>
             <form action="remove-atividade.php" method="post">
                 <input type="hidden" name="id" value="<?=$atividade['id']?>">
-                <button class="btn btn-seconday">Remover</a>
+                <button class="btn green lighten-2">Remover</a>
             </form>
         </td>
         <td>
             <form action="alterar-atividade.php" method="post">
                 <input type="hidden" name="id" value="<?=$atividade['id']?>">
-                <button class="btn btn-primary">Alterar</a>
+                <button class="btn red darken-2">Alterar</a>
             </form>
         </td>
     </tr>
     <?php endforeach; ?>
     </table>
 
-   <a href="form-materia.php" class="btn-floating btn-large waves-effect waves-light red">
+   <a href="form-atividade.php" class="btn-floating btn-large waves-effect waves-light red">
         <i class="material-icons">add</i>
     </a>
 
