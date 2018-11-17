@@ -5,11 +5,11 @@
 
 <h3>Adicionar Materia</h3>
 
-<form action="adicionar-materia.php" method="post">
+<form id='formSubmit'>
   
     <?php include("form-materia-base.php")?>
     
-    <button type="submit" class="btn btn-primary">Cadastrar</button>
+    <input type='button' id='js-btn-mat' class="btn btn-primary" value='Cadastrar'>
 </form>
 
 <?php

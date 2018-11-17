@@ -21,16 +21,29 @@
     </div>
 </div>
 
-<p>
-    <label>
-        <input name="periodo" type="radio" value="semestral" <?=$semestral?>/>
-        <span>Semestral</span>
-    </label>
-</p>
+<div id='js-radio'>
+    <p>
+        <label>
+            <input name="periodo" type="radio" value="semestral" <?=$semestral?>/>
+            <span>Semestral</span>
+        </label>
+    </p>
 
-<p>
-    <label>
-        <input name="periodo" type="radio" value="anual" <?=$anual?>/>
-        <span>Anual</span>
-    </label>
-</p>
+    <p>
+        <label>
+            <input name="periodo" type="radio" value="anual" <?=$anual?>/>
+            <span>Anual</span>
+        </label>
+    </p>
+</div>
+
+<div id='js-modal-dialog' class='lm-out-modal lm-d-none'>
+    <div class='lm-inner-modal'>
+        <input type='button' id='js-btn-close' class='lm-btn-close' value='x'>
+        <div class='lm-msg-modal'>
+            <h5>Erro</h5>
+            <hr>
+            <p>Há campos que não foram preenchidos corretamente.</p>
+        </div>
+    </div>
+</div>
